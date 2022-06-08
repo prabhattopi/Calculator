@@ -1,4 +1,4 @@
-import { COUNTER_ADD, COUNTER_DECREMENT, COUNTER_DIVIDE, COUNTER_INCREMENT, COUNTER_MULTIPLY, COUNTER_SUB } from "./actiontype"
+import { CLEAR_COUNT, COUNTER_ADD, COUNTER_DECREMENT, COUNTER_DIVIDE, COUNTER_INCREMENT, COUNTER_MULTIPLY, COUNTER_SUB } from "./actiontype"
 
 
 export const Add=()=>({type:COUNTER_INCREMENT})
@@ -11,3 +11,7 @@ export const Minus=(value)=>{
     return{type:COUNTER_SUB,payload:value}}
 export const Divide=(value)=>{
     return{type:COUNTER_DIVIDE,payload:value}}
+
+export const clear=()=>{
+   return{type:CLEAR_COUNT}
+}    

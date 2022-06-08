@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Add, Divide, Jor, Minus, Multiply, Subtract } from "./Store/action";
+import { Add, clear, Divide, Jor, Minus, Multiply, Subtract } from "./Store/action";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     <div className="App">
-     <h1>Counter:{count}</h1>
+     <h1>Counter:{count==Infinity?"Error":count}</h1>
      <div ><button style={{marginRight:'20px'}} onClick={()=>dispatch(Add())}>+</button>
      <button onClick={()=>dispatch(Subtract())}>-</button>
      </div>
@@ -32,6 +32,7 @@ function App() {
       <button onClick={()=>dispatch(Multiply(Number(value)))}>Multiply</button>
       <button onClick={()=>dispatch(Divide(Number(value)))}>Divide</button>
       </div>
+      <button style={{marginTop:"20px"}} onClick={()=>dispatch(clear())}>Clear</button>
     </div>
     
    </>
