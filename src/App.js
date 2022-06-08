@@ -32,7 +32,11 @@ function App() {
       <button onClick={()=>dispatch(Multiply(Number(value)))}>Multiply</button>
       <button onClick={()=>dispatch(Divide(Number(value)))}>Divide</button>
       </div>
-      <button style={{marginTop:"20px"}} onClick={()=>dispatch(clear())}>Clear</button>
+      <button style={{marginTop:"20px"}} onClick={()=>{
+        
+        dispatch(clear())
+        setvalue("")
+        }}>Clear</button>
     </div>
     
    </>
